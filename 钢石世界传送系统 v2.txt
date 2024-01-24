@@ -1,0 +1,378 @@
+----- LOG -----
+v2.0.0: (20210725)
+- 将指令更新至1.17版本
+
+v2.0.1: (20210801)
+- 加入潘家大宅，修改潘家军港位置
+
+v2.0.2 (20220131)
+- 添加银橡树区诸多地点
+
+v2.0.3 (20230120)
+- 添加MPI新地点
+- 更新阿勒隆市传送点
+- 添加杭丁顿传送点
+- 添加沙漠地区地点
+
+v2.0.4 (20230126)
+- 添加MPI新地点
+- 修改北方地区书排版
+
+v2.0.5 (20240122)
+- 添加赛车场区
+- 真荔枝kun国成立
+- 添加黑枝岛
+
+
+----- SETUP -----
+/scoreboard objectives add tpBook trigger
+
+----- TP CONTROL -----
+/scoreboard players enable @a tpBook
+/clear @a[scores={tpBook=1}] minecraft:written_book{Tags:["SUB"]} 16
+/clear @a[scores={tpBook=x}] minecraft:written_book{Tags:["MAIN"]} 16
+/execute as @a[scores={tpBook=x}] at @s run give ...
+/scoreboard players set @a[scores={tpBook=x}] tpBook 0
+
+
+
+----- MAIN BOOK -----
+give @p written_book{pages:[
+'[{"text":"钢石王国地理区划","bold":"true","underlined":"true"},{"text":"\\n","color":"reset"},
+{"text":"钢石区 Steelrock Region","color":"blue","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/trigger tpBook set 2"}},{"text":"\\n","color":"reset"},
+{"text":"格林菲尔德区 Greenfield Region","color":"gray","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/trigger tpBook set 3"}},{"text":"\\n","color":"reset"},
+{"text":"霸王区 Oberherr Region","color":"dark_red","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/trigger tpBook set 4"}},{"text":"\\n","color":"reset"},
+{"text":"潘叔区 Miles Pan Region","color":"dark_green","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/trigger tpBook set 5"}},{"text":"\\n","color":"reset"},
+{"text":"银橡树区 Silveroak AAR","color":"gold","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/trigger tpBook set 6"}},{"text":"\\n","color":"reset"},
+{"text":"天青区 Azur Region","color":"aqua","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/trigger tpBook set 7"}},{"text":"\\n","color":"reset"},
+{"text":"北方地区 Northern Territories","color":"dark_blue","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/trigger tpBook set 8"}},{"text":"\\n","color":"reset"},
+{"text":"新开发区 New Development Region","color":"dark_aqua","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/trigger tpBook set 9"}},{"text":"\\n","color":"reset"},
+{"text":"大中华共荣圈 Greater Chinese Coprosperity Sphere","color":"red","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/trigger tpBook set 10"}}]',
+],title:"钢石世界主传送书",author:FlazeSky105,display:{Lore:['{"text":"钢石世界传送系统v2.0.5"}']},Tags:["MAIN"]}
+
+
+
+----- Steelrock Region - OSR -----
+give @p written_book{pages:[
+'["",{"text":"钢石区 Steelrock Region","bold":true,"underlined":true},{"text":"\\n","color":"reset"},
+{"text":"钢石广场 - Steelrock Square","color":"gray","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p 1382 64 1763"}},{"text":"\\n","color":"reset"},
+{"text":"新钢石广场 - Neo Steelrock Square","color":"blue","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p 1365 65 2701"}},{"text":"\\n","color":"reset"},
+{"text":"钢石城 - City of Steelrock","color":"black","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p 808 65 2093"}},{"text":"\\n","color":"reset"},
+{"text":"联合车站 - Union Station","color":"aqua","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p 1314 65 1579"}},{"text":"\\n","color":"reset"},
+{"text":"起始之城 - City of Beginnings","color":"dark_green","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p 1248 64 768"}},{"text":"\\n","color":"reset"},
+{"text":"旧王都 - Former Capital","color":"dark_red","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p 686 64 800"}},{"text":"\\n","color":"reset"},
+{"text":"学园岛 - Academy Island","color":"gold","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p 1975 71 1012"}},{"text":"\\n","color":"reset"},
+{"text":"现代都市 - Modern City","color":"dark_gray","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p 2132 64 1861"}},{"text":"\\n","color":"reset"},
+{"text":"传送中心 - Teleportation Center","color":"dark_blue","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p 1061 64 1958"}},
+{"text":"\\n    [返回]","color":"black","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/trigger tpBook set 1"}}]',
+'[{"text":"霸王工厂 - B.W.S.R. Tech","color":"red","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p 872 64 1924"}},{"text":"\\n","color":"reset"},
+{"text":"霸王空岛 - Oberherrn Island","color":"aqua","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p 269 140 1998"}},{"text":"\\n","color":"reset"},
+{"text":"要塞都市 - Fortress City\\n","color":"dark_aqua","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p -710 72 2463"}},
+{"text":"降星镇 - Starry Mills\\n","color":"dark_blue","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p 1439 66 4222"}},
+{"text":"AREA 73-5\\n","color":"dark_purple","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p 3049 63 2888"}},
+{"text":"钢石王国社会主义共和联军联合总指挥部及会议山庄 - HQ\\n","color":"dark_red","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p -65 74 4081"}},
+{"text":"明斯克造船厂 - Minsk Shipyard\\n","color":"blue","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p -804 76 5337"}},
+{"text":"迈尔斯王大学 - King Miles University","color":"gold","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p 874 64 3676"}}]'
+],title:"钢石世界钢石区传送书",author:FlazeSky105,display:{Lore:['{"text":"钢石世界传送系统v2.0.5"}']},Tags:["OSR","SUB"]}
+
+
+
+----- Greater Greenfield Area - GRN -----
+give @p written_book{pages:[
+'[{"text":"大格林菲尔德地区 Greater Greenfield Area","bold":true,"underlined":true},{"text":"\\n","color":"reset"},
+{"text":"水上都市 - Maikura City","color":"gray","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p 2306 68 5087"}},{"text":"\\n","color":"reset"},
+{"text":"迈尔斯王赛车场 - King Miles Speedway","color":"red","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p 8382 74 522"}},{"text":"\\n","color":"reset"},
+{"text":"必应机场 - Bing Airport","color":"dark_gray","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p 9211 67 682"}},{"text":"\\n","color":"reset"},
+{"text":"潘家园 - Pan Jia Yuan\\n","color":"black","underlined":"true","bold":"false"},
+{"text":" 潘北桥 - North Bridge\\n","color":"dark_purple","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p 5695 69 6845"}},
+{"text":" 潘南桥 - South Bridge\\n","color":"gold","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p 5837 80 7221"}},
+{"text":" 潘家港 - Port\\n","color":"blue","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p 6589 64 7017"}},
+{"text":" 潘家大宅 - Pan\'s Mansion","color":"green","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p 6845 69 7219"}},
+{"text":" 纪伊号战列舰 - Battleship","color":"aqua","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p 6831 66 7638"}},
+{"text":"\\n\\n    [返回]","color":"black","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/trigger tpBook set 1"}}]',
+'[{"text":"漯河市 Luo He City\\n","bold":true,"underlined":true},
+{"text":"西货港 - West Port\\n","color":"gray","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p 4134 69 2216"}},
+{"text":"小区广场 - Residential Square\\n","color":"dark_red","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p 5356 70 3598"}},
+{"text":"中心广场 - New Luo He Square\\n","color":"aqua","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p 5218 76 2879"}},
+{"text":"新区北公园 - North Park\\n","color":"blue","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p 5438 70 2329"}},
+{"text":"漯河实验小学 - Luo He Elementary\\n","color":"dark_green","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p 6450 73 3151"}},
+{"text":"漯河市二十六中 - 26th Middle School","color":"gold","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p 6183 70 2519"}}]',
+'[{"text":"格林菲尔德市 Greenfield City","bold":true,"underlined":true},{"text":"\\n","color":"reset"},
+{"text":"青舞仓桥 - Ao-Maikura Bridge","color":"aqua","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p 2967 68 5990"}},{"text":"\\n","color":"reset"},
+{"text":"北市中心 - North Downtown","color":"dark_green","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p 2795 69 7147"}},{"text":"\\n","color":"reset"},
+{"text":"跨海大桥 - Green-Patrio Bridge","color":"dark_red","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p 2427 69 6909"}},{"text":"\\n","color":"reset"},
+{"text":"中心码头 - Center Port","color":"gray","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p 3897 66 7937"}},{"text":"\\n","color":"reset"},
+{"text":"南区中央公园 - South Park","color":"dark_aqua","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p 5028 69 9191"}},{"text":"\\n","color":"reset"},
+{"text":"南区田园 - Southern Countryside","color":"gold","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p 3047 65 9422"}},{"text":"\\n","color":"reset"},
+{"text":"潜艇基地 - Submarine Base","color":"dark_blue","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p 6985 78 8506"}}]'
+],title:"钢石世界格林菲尔德区传送书",author:FlazeSky105,display:{Lore:['{"text":"钢石世界传送系统v2.0.5"}']},Tags:["GRN","SUB"]}
+
+
+
+----- Oberherr Region - BWR -----
+give @p written_book{pages:[
+'[{"text":"霸王区 Oberherr Region","bold":true,"underlined":true},{"text":"\\n","color":"reset"},
+{"text":"霸王广场 - Oberherrn Square","color":"gold","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p -7446 3 2882"}},{"text":"\\n","color":"reset"},
+{"text":"霸王殿 - Oberherr\'s Palace","color":"dark_blue","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p -5790 21 1741"}},{"text":"\\n","color":"reset"},
+{"text":"霸王宫 - Castle of Thaumaturgy","color":"dark_red","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p -5790 13 1203"}},{"text":"\\n","color":"reset"},
+{"text":"地狱传送门 - Grand Portal","color":"dark_purple","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p -6349 13 1109"}},{"text":"\\n","color":"reset"},
+{"text":"霸王大坝 - Oberherrn Dam","color":"dark_aqua","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p -4422 73 2264"}},{"text":"\\n","color":"reset"},
+{"text":"南石酒吧本店 - South Rock Main Est.","color":"dark_green","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p -6859 3 2598"}},
+{"text":"\\n\\n\\n\\n\\n    [返回]","color":"black","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/trigger tpBook set 1"}}]',
+'[{"text":"奥斯格伦植物园 - Ostgrun Botanical Garden","color":"dark_green","bold":"false","underlined":"false"},{"text":"\\n","color":"reset"},
+{"text":"  南桥","color":"green","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p -5303 22 2574"}},{"text":" | ","color":"reset","bold":"false","underlined":"false"},
+{"text":"西南道","color":"green","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p -5699 22 2454"}},{"text":" | ","color":"reset","bold":"false","underlined":"false"},
+{"text":"东北口","color":"green","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p -5205 22 2225"}},{"text":"\\n","color":"reset"},
+{"text":"罗特施坦因堡 - Fort Roterstein","color":"gold","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p -4997 21 2314"}},{"text":"\\n","color":"reset"},
+{"text":"希甘希纳城 - Shigashina","color":"dark_red","bold":"false","underlined":"false"},{"text":"\\n","color":"reset"},
+{"text":"  东门","color":"red","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p -5711 22 2641"}},{"text":" | ","color":"reset","bold":"false","underlined":"false"},
+{"text":"西门","color":"red","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p -6362 16 2628"}},{"text":" | ","color":"reset","bold":"false","underlined":"false"},
+{"text":"西北关外","color":"red","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p -6346 13 2168"}},{"text":"\\n","color":"reset"},
+{"text":"圣弗雷泽大教堂 - St. Flaze Cathedral","color":"dark_aqua","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p -6607 4 2801"}},{"text":"\\n","color":"reset"},
+{"text":"霸王空港 - Airship Port","color":"aqua","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p -8127 59 2274"}},{"text":"\\n","color":"reset"}]',
+'[{"text":"洛斯里克城 - Lothric Castle","color":"dark_gray","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p -7786 117 2213"}},{"text":"\\n","color":"reset"},
+{"text":"诺登费兹城 - Nordenfeiz","color":"gray","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p -7145 3 2051"}},{"text":"\\n","color":"reset"},
+{"text":"艾希利亚城 - Castle Ethyria","color":"dark_blue","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p -8717 70 1956"}},{"text":"\\n","color":"reset"},
+{"text":"西拉斯克城 - Castle Shirask","color":"blue","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p -7982 88 1236"}},{"text":"\\n","color":"reset"},
+{"text":"天堂陨落之门 - Heavenfall Gate","color":"dark_purple","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p -6838 4 -21"}}]'
+],title:"钢石世界霸王区传送书",author:FlazeSky105,display:{Lore:['{"text":"钢石世界传送系统v2.0.5"}']},Tags:["BWR","SUB"]}
+
+
+
+----- Miles Pan Region - PAN -----
+give @p written_book{pages:[
+'[{"text":"潘叔区 Miles Pan Region","bold":true,"underlined":true},{"text":"\\n","color":"reset"},
+{"text":"MPI园区大门 - Miles Pan Industries","color":"gray","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p -5839 67 5196 -180 0"}},{"text":"\\n","color":"reset"},
+{"text":"园区总部大楼 - M.P.I. HQ","color":"dark_gray","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p -5839 68 4897 -180 0"}},{"text":"\\n","color":"reset"},
+{"text":"魔导兵器管理局 - T.W.M.A","color":"dark_purple","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p -5568 67 4473 -180 0"}},{"text":"\\n","color":"reset"},
+{"text":"钢石皇家大学园区分院 - M.P.I. College","color":"gold","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p -5612 67 4620 -90 0"}},{"text":"\\n","color":"reset"},
+{"text":"皇家植物园 - Royal Botanical Garden","color":"blue","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p -5839 68 4271 -180 0"}},{"text":"\\n","color":"reset"},
+{"text":"银河图书馆 - Galaxy Grand Library","color":"dark_red","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p -5026 61 4073"}},{"text":"\\n","color":"reset"},
+{"text":"765 Pro Live Theater","color":"aqua","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p -5629 63 5201"}},{"text":"\\n","color":"reset"},
+{"text":"群岛 - Islands","color":"dark_green","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p -3964 67 3684"}},
+{"text":"\\n    [返回]","color":"black","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/trigger tpBook set 1"}}]',
+'[{"text":"吃鸡专用岛 - Eatery Island","color":"gold","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p -3282 64 2538"}},{"text":"\\n","color":"reset"},
+{"text":"海军住宅区机场 - Navy Residential Airport","color":"dark_blue","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p -4105 67 4877"}},{"text":"\\n","color":"reset"},
+{"text":"海军公寓岛 - Navy Residential Island","color":"dark_green","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p -4175 67 5231"}},{"text":"\\n","color":"reset"},
+{"text":"航天中心 - Aerospace Technology Center","color":"dark_purple","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p -6644 77 3642"}},{"text":"\\n","color":"reset"},
+{"text":"繁星之门 - Star Gate","color":"light_purple","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p -3699 67 6011"}},{"text":"\\n","color":"reset"},
+{"text":"水城威尼斯 - Venezia","color":"blue","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p -3187 65 4508"}}]',
+'[{"text":"MPI Military","bold":true,"underlined":true},{"text":"\\n","color":"reset"},
+{"text":"军港 - Military Port","color":"dark_aqua","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p -4582 66 5339"}},{"text":"\\n","color":"reset"},
+{"text":"42-Lab","color":"aqua","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p -7338 194 4513"}},{"text":"\\n","color":"reset"},
+{"text":"GxN造船厂 - GxN Shipworks","color":"dark_red","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p -7478 71 5488"}},{"text":"\\n","color":"reset"},
+{"text":"  A区","color":"red","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p -8266 71 5220"}},{"text":" | ","color":"reset","bold":"false","underlined":"false"},
+{"text":"C区","color":"red","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p -7478 71 5488"}},{"text":" | ","color":"reset","bold":"false","underlined":"false"},
+{"text":"停泊区","color":"red","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p -6640 67 5661"}},{"text":"\\n","color":"reset"},
+{"text":"米德加一区 - Midgard Area 1","color":"blue","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p -8292 110 3845"}},{"text":"\\n","color":"reset"},
+{"text":"I.O.P.基地 - Base I.O.P.","color":"gray","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p -4476 81 1422"}},{"text":"\\n","color":"reset"},
+{"text":"格里芬HQ - Griffin Headquarters","color":"dark_purple","bold":"false","underlined":"false"},{"text":"\\n","color":"reset"},
+{"text":"  总部","color":"light_purple","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p -3069 233 1797"}},{"text":" | ","color":"reset","bold":"false","underlined":"false"},
+{"text":"机动作战中心","color":"light_purple","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p -3620 309 1825"}},{"text":"\\n","color":"reset"}]',
+'[{"text":"MPI Entertainment","bold":true,"underlined":true},{"text":"\\n","color":"reset"},
+{"text":"MPI度假村 - MPI Resort","color":"dark_green","bold":"false","underlined":"false"},{"text":"\\n","color":"reset"},
+{"text":"  酒店岛","color":"green","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p 3989 65 13411"}},{"text":" | ","color":"reset","bold":"false","underlined":"false"},
+{"text":"度假屋岛","color":"green","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p 3366 64 13326"}},{"text":" | ","color":"reset","bold":"false","underlined":"false"},{"text":"\\n","color":"reset"},
+{"text":"  池塘酒店","color":"green","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p 3406 66 13592"}},{"text":"\\n","color":"reset"},
+{"text":"菲尼克斯堡 - Fort Phoenix","color":"dark_aqua","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p 3580 64 13883 30 -20"}},{"text":"\\n","color":"reset"},
+{"text":"亨得利礁自然保护区 - Hendrey Isle Sanctuary","color":"aqua","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p 4598 64 13751"}},{"text":"\\n","color":"reset"},
+{"text":"埃瑞尼尔度假村 - Elrinir Resort","color":"gold","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p 4923 98 13594"}},{"text":"\\n","color":"reset"},
+{"text":"巅峰岭滑雪场 - Summit Ridge","color":"dark_purple","bold":"false","underlined":"false"},{"text":"\\n","color":"reset"},
+{"text":"  码头","color":"light_purple","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p -5465 64 -4609"}},{"text":" | ","color":"reset","bold":"false","underlined":"false"},
+{"text":"山顶","color":"light_purple","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p -5249 228 -4845"}},{"text":"\\n","color":"reset"},
+{"text":"双峰滑雪场 - Twin Peak","color":"dark_blue","bold":"false","underlined":"false"},{"text":"\\n","color":"reset"},
+{"text":"  停车场","color":"blue","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p -5156 82 -3919"}},{"text":" | ","color":"reset","bold":"false","underlined":"false"},
+{"text":"酒店","color":"blue","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p -5510 80 -4238"}},{"text":" | ","color":"reset","bold":"false","underlined":"false"},
+{"text":"山顶","color":"blue","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p -5594 134 -3794"}}]'
+],title:"钢石世界潘叔区传送书",author:FlazeSky105,display:{Lore:['{"text":"钢石世界传送系统v2.0.5"}']},Tags:["PAN","SUB"]}
+
+
+
+----- Silveroak AAR - SVO -----
+give @p written_book{pages:[
+'[{"text":"银橡树自治区 Silveroak AAR","bold":true,"underlined":true},{"text":"\\n","color":"reset"},
+{"text":"南方帝国 - The Forgotten Empire","color":"dark_red","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p -4851 65 9124"}},{"text":"\\n","color":"reset"},
+{"text":"爱国城 - Patrioville","color":"black","bold":false,"underlined":true},{"text":"\\n","color":"reset"},
+{"text":" 底特律 - Detroit","color":"gray","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p -1792 68 8427"}},{"text":"\\n","color":"reset"},
+{"text":" 拉斯维加斯 - Las Vegas","color":"gold","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p -948 67 7343"}},{"text":"\\n","color":"reset"},
+{"text":" 下界之星能源研究中心 - N.S.E.R.S.","color":"red","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p -239 67 7864"}},{"text":"\\n","color":"reset"},
+{"text":"\\n\\n\\n\\n   [返回]","color":"black","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/trigger tpBook set 1"}}]',
+'[{"text":"璃月","color":"dark_purple","bold":false,"underlined":false},{"text":"\\n","color":"reset"},
+{"text":"  绯云坡","color":"light_purple","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p -2988 105 12095"}},{"text":" | ","color":"reset","bold":"false","underlined":"false"},
+{"text":"吃虎岩","color":"light_purple","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p -3148 96 11873"}},{"text":"\\n","color":"reset"},
+{"text":"  不卜庐","color":"light_purple","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p -2895 124 12211"}},{"text":" | ","color":"reset","bold":"false","underlined":"false"},
+{"text":"玉京台","color":"light_purple","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p -2931 141 11962"}},{"text":"\\n","color":"reset"},
+{"text":"白夜之城","color":"dark_aqua","bold":false,"underlined":false},{"text":"\\n","color":"reset"},
+{"text":"  码头","color":"aqua","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p -1344 106 12454"}},{"text":" | ","color":"reset","bold":"false","underlined":"false"},
+{"text":"湖畔路","color":"aqua","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p -2069 73 12814"}},{"text":" | ","color":"reset","bold":"false","underlined":"false"},
+{"text":"警察局","color":"aqua","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p -1917 297 12603"}},{"text":"\\n","color":"reset"},
+{"text":"帝国都市","color":"dark_red","bold":false,"underlined":false},{"text":"\\n","color":"reset"},
+{"text":"  帝国礼拜堂","color":"red","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p -2567 65 10870"}},{"text":"\\n","color":"reset"},
+{"text":"  大俾斯麦广场","color":"red","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p -2029 71 10538"}},{"text":"\\n","color":"reset"},
+{"text":"  时钟塔","color":"red","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p -2357 71 10145"}},{"text":"\\n","color":"reset"},
+{"text":"  总务市政厅","color":"red","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p -1449 71 10475"}},{"text":"\\n","color":"reset"}]'
+],title:"钢石世界银橡树区传送书",author:FlazeSky105,display:{Lore:['{"text":"钢石世界传送系统v2.0.5"}']},Tags:["SVO","SUB"]}
+
+
+
+----- Azur Region - AZR -----
+give @p written_book{pages:[
+'[{"text":"天青区 Azur Region","bold":true,"underlined":true},{"text":"\\n","color":"reset"},
+{"text":"天青岛 Azur Island","color":"dark_aqua","bold":false,"underlined":"false"},{"text":"\\n","color":"reset"},
+{"text":"  碧蓝港","color":"aqua","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p -11387 80 4275"}},{"text":" | ","color":"reset","bold":"false","underlined":"false"},
+{"text":"机场","color":"aqua","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p -10642 73 3160"}},{"text":"\\n","color":"reset"},
+{"text":"中世纪岛 - Medieval Island","color":"dark_green","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p -12298 65 712"}},{"text":"\\n","color":"reset"},
+{"text":"金斯兰丁 King\'s Landing","color":"dark_red","bold":false,"underlined":"false"},{"text":"\\n","color":"reset"},
+{"text":"  广场","color":"gold","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p -9457 72 2984"}},{"text":" | ","color":"reset","bold":"false","underlined":"false"},
+{"text":"码头","color":"gold","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p -9496 71 3386"}},{"text":"\\n","color":"reset"},
+{"text":"朋克岛 - Punk Island","color":"dark_gray","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p -10855 111 1798"}},{"text":"\\n","color":"reset"},
+{"text":"弗拉波利斯 - Volapolis","color":"green","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p -10755 70 973"}},{"text":"\\n","color":"reset"},
+{"text":"亚特兰蒂德 Atlantid","color":"dark_blue","bold":false,"underlined":"false"},{"text":"\\n","color":"reset"},
+{"text":"  正殿","color":"blue","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p -12163 66 1390"}},{"text":" | ","color":"reset","bold":"false","underlined":"false"},
+{"text":"侧岛","color":"blue","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p -12595 89 1449"}},
+{"text":"\\n\\n\\n\\n   [返回]","color":"black","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/trigger tpBook set 1"}}]',
+'[{"text":"新大陆 Neuesland","bold":true,"underlined":true},{"text":"\\n","color":"reset"},
+{"text":"战争之城 - Corte Madera","color":"red","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p -12116 19 8203"}},{"text":"\\n","color":"reset"},
+{"text":"爱伦威尔 - Ironwell","color":"gray","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p -11407 80 9516"}},{"text":"\\n","color":"reset"},
+{"text":"新伊森加德 - New Isengard","color":"dark_green","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p -13053 4 9136"}},{"text":"\\n","color":"reset"},
+{"text":"伊森加德遗迹 - Isengard Ruin","color":"dark_red","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p -10773 31 8518"}},{"text":"\\n","color":"reset"},
+{"text":"拉格纳斯坦 - Ragnarstein","color":"green","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p -11719 68 6843"}},{"text":"\\n","color":"reset"},
+{"text":"魔法学院 - Hogwarts","color":"gold","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p -13387 66 7829"}}]'
+],title:"钢石世界天青区传送书",author:FlazeSky105,display:{Lore:['{"text":"钢石世界传送系统v2.0.5"}']},Tags:["AZR","SUB"]}
+
+
+
+----- Northern Regions - NPK -----
+give @p written_book{pages:[
+'[{"text":"寒冰经济区 Frozen Ice Economic Zone","bold":true,"underlined":true},{"text":"\\n","color":"reset"},
+{"text":"阿勒隆市 Alleron City","color":"dark_blue","bold":false,"underlined":"false"},{"text":"\\n","color":"reset"},
+{"text":"  机场","color":"aqua","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p 18771 74 -7032"}},{"text":" | ","color":"reset","bold":"false","underlined":"false"},
+{"text":"市中心","color":"aqua","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p 16923 65 -7877"}},{"text":"\\n","color":"reset"},
+{"text":"  四角大楼酒店","color":"aqua","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p 14992 65 -6706"}},{"text":" | ","color":"reset","bold":"false","underlined":"false"},
+{"text":"棕榈岛","color":"green","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p 16780 65 -5680"}},{"text":"\\n","color":"reset"},
+{"text":"  世界群岛","color":"green","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p 12764 65 -5392"}},{"text":"\\n","color":"reset"},
+{"text":"寒冰市 - City of Frozen Ice","color":"dark_aqua","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p 21411 69 -7677"}},{"text":"\\n","color":"reset"},
+{"text":"公爵岛 - Duke Island","color":"dark_green","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p 23083 73 -6489"}},{"text":"\\n\\n","color":"reset"},
+{"text":"杭丁顿 Huntington","color":"dark_red","bold":false,"underlined":"false"},{"text":"\\n","color":"reset"},
+{"text":"  机场","color":"red","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p 7128 78 -3683"}},{"text":" | ","color":"black","bold":"false","underlined":"false"},
+{"text":"市中心","color":"red","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p 4455 68 -5754"}},{"text":" | ","color":"black","bold":"false","underlined":"false"},
+{"text":"居民区","color":"red","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p 5156 77 -8633"}},
+{"text":"\\n\\n\\n    [返回]","color":"black","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/trigger tpBook set 1"}}]',
+'[{"text":"北方地区 Northern Regions","bold":true,"underlined":true},{"text":"\\n","color":"reset"},
+{"text":"姜饼城 Gingerbread City","color":"dark_aqua","bold":"false","underlined":"false"},{"text":"\\n","color":"reset"},
+{"text":"  城南","color":"aqua","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p -4613 13 -3744"}},{"text":" | ","color":"black","bold":"false","underlined":"false"},
+{"text":"主城","color":"aqua","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p -4565 34 -4786"}},{"text":" | ","color":"black","bold":"false","underlined":"false"},
+{"text":"湖畔","color":"aqua","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p -4743 33 -4715"}},{"text":"\\n","color":"reset"},
+{"text":"布罗维尔 - Broville","color":"dark_gray","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p -1448 75 -529"}},{"text":"\\n","color":"reset"},
+{"text":"大提顿国家公园 - Grand Teton National Park","color":"dark_green","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p -8718 11 -1228"}},{"text":"\\n","color":"reset"},
+{"text":"冰川公园 - Glacier National Park","color":"dark_aqua","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p -1735 196 -3251"}},{"text":"\\n","color":"reset"},
+{"text":"魔界之关 - Underworld\'s Pass","color":"dark_purple","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p -13115 103 -8855"}},{"text":"\\n","color":"reset"},
+{"text":"高雅城 Elegant City","color":"dark_red","bold":false,"underlined":"false"},{"text":"\\n","color":"reset"},
+{"text":"  主岛","color":"red","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p -10462 40 -8475"}},{"text":" | ","color":"reset","bold":"false","underlined":"false"},
+{"text":"副岛","color":"red","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p -10003 10 -8641"}},{"text":"\\n","color":"reset"},
+{"text":"诺威格勒 - Novigrad","color":"gold","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p -8627 8 -8162"}},{"text":"\\n","color":"reset"},
+{"text":"纪念碑谷地 - Monument Valley","color":"gray","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p -4779 36 -8697"}}]',
+'[{"text":"巴洛克城 Baroque City","color":"dark_green","bold":"false","underlined":"false"},{"text":"\\n","color":"reset"},
+{"text":"  空港","color":"green","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p -4517 36 -5974"}},{"text":" | ","color":"black","bold":"false","underlined":"false"},
+{"text":"中心广场","color":"green","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p -4513 36 -6160"}},{"text":"\\n","color":"reset"},
+{"text":"流浪图书馆 - Wanderer\'s Library","color":"gray","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p -1664 36 -8642"}},{"text":"\\n","color":"reset"},
+{"text":"圣米切尔山 Le Mont-Saint-Michel","color":"dark_blue","dark_green":"false","underlined":"false"},{"text":"\\n","color":"reset"},
+{"text":"  南方平原","color":"blue","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p -819 29 -7417"}},{"text":" | ","color":"black","bold":"false","underlined":"false"},
+{"text":"山前","color":"blue","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p -751 29 -7728"}},{"text":"\\n","color":"reset"}]',
+'[{"text":"MPI赛车主题公园 - MPI Motor Sports World","color":"black","bold":"true","underlined":"true"},{"text":"\\n","color":"reset"},
+{"text":"银石赛道","color":"dark_blue","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p 8427 65 215"}},{"text":"\\n","color":"reset"},
+{"text":"加泰隆尼亚赛道","color":"gold","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p 7432 71 789"}},{"text":"\\n","color":"reset"},
+{"text":"吉尔斯维伦纽夫赛道","color":"blue","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p 7478 71 2559"}},{"text":"\\n","color":"reset"},
+{"text":"铃鹿赛道","color":"red","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p 5579 71 898"}},{"text":"\\n","color":"reset"},
+{"text":"上海国际赛车场","color":"dark_red","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p 4635 71 400"}},{"text":"\\n","color":"reset"},
+{"text":"蒙扎国家赛车场","color":"dark_green","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p 5922 75 -850"}},{"text":"\\n","color":"reset"},
+{"text":"斯帕弗朗科尔尚赛道","color":"dark_gray","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p 3268 71 -685"}},{"text":"\\n","color":"reset"},
+{"text":"保罗里卡德赛道","color":"gray","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p 3120 71 65"}},{"text":"\\n","color":"reset"},
+{"text":"迈阿密国际赛车场","color":"light_purple","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p 917 71 -400"}},{"text":"\\n","color":"reset"}]'
+],title:"钢石世界北方地区传送书",author:FlazeSky105,display:{Lore:['{"text":"钢石世界传送系统v2.0.5"}']},Tags:["NPK","SUB"]}
+
+
+
+----- New Development Region - MTP -----
+give @p written_book{pages:[
+'[{"text":"新开发区 New Development Region","bold":true,"underlined":true},{"text":"\\n","color":"reset"},
+{"text":"真荔枝kun国 - Ikun Nation","color":"black","bold":false,"underlined":true},{"text":"\\n","color":"reset"},
+{"text":" 北口路 - Northway","color":"dark_green","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p 24637 68 3174"}},{"text":"\\n","color":"reset"},
+{"text":" 国家机场 - Ikun Airport","color":"dark_purple","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p 25353 69 3979"}},{"text":"\\n","color":"reset"},
+{"text":" 坤家港 - Port K.","color":"gray","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p 25880 69 4962"}},{"text":"\\n","color":"reset"},
+{"text":"黑枝岛 - Black Lychee Island","color":"black","bold":false,"underlined":true},{"text":"\\n","color":"reset"},
+{"text":" 游艇","color":"aqua","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p 25140 85 6228"}},{"text":"  |  ","color":"black","bold":"false","underlined":"false"},
+{"text":"岛上停车场","color":"green","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p 24646 68 6365"}},{"text":"\\n","color":"reset"},
+{"text":"玄炎岛 - Xuan Yan Island","color":"black","bold":false,"underlined":true},{"text":"\\n","color":"reset"},
+{"text":" 北滩","color":"red","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p 19056 66 950"}},{"text":"  |  ","color":"black","bold":"false","underlined":"false"},
+{"text":"西滩","color":"gold","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p 17979 66 2113"}},{"text":"\\n","color":"reset"},
+{"text":"钢石海军主泊地 - Main Military Port","color":"dark_blue","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p 10024 68 9186"}},{"text":"\\n","color":"reset"},
+{"text":"\\n\\n    [返回]","color":"black","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/trigger tpBook set 1"}}]',
+'[{"text":"玛突波利斯 Mattupolis","bold":true,"underlined":true},{"text":"\\n","color":"reset"},
+{"text":"北郊站 - Hastings Junction Station","color":"gray","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p 27038 69 9590"}},{"text":"\\n","color":"reset"},
+{"text":"机场 - MTP Airport","color":"dark_gray","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p 26965 67 10090"}},{"text":"\\n","color":"reset"},
+{"text":"市中心 - Downtown Mattupolis","color":"gold","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p 24612 67 10196"}},{"text":"\\n","color":"reset"},
+{"text":"西郊镇 - Granby","color":"dark_aqua","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p 23177 74 12198"}},{"text":"\\n","color":"reset"},
+{"text":"南郊镇 - Clearfalls","color":"aqua","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p 24878 101 11677"}},{"text":"\\n","color":"reset"},
+{"text":"旅游村 - Mountain High","color":"dark_green","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p 23258 67 11626"}},{"text":"\\n","color":"reset"},
+{"text":"北港口 - Port Marina","color":"blue","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p 23835 65 9754"}}]',
+'[{"text":"魔导兵工科研中心岛 Die Forschungszentrum-Insel","bold":true,"underlined":true},{"text":"\\n","color":"reset"},
+{"text":"北机场 - Naqis Airport","color":"gray","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p 16024 73 1925"}},{"text":"\\n","color":"reset"},
+{"text":"东机场 - Marabuk Airport","color":"dark_red","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p 17929 75 4229"}},{"text":"\\n","color":"reset"},
+{"text":"国际机场 - N. Airport","color":"gold","bold":false,"underlined":false},{"text":"\\n   ","color":"black","bold":"false","underlined":"false"},
+{"text":"T1","color":"dark_aqua","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p 15887 67 5955"}},{"text":"  |  ","color":"black","bold":"false","underlined":"false"},
+{"text":"T3","color":"blue","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p 16652 67 6308"}},{"text":"\\n","color":"reset"},
+{"text":"市中心 - Downtown FSZ","color":"dark_purple","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p 17960 68 6305"}},{"text":"\\n","color":"reset"},
+{"text":"货港 - Cargo Port","color":"dark_green","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p 14795 67 6731"}},{"text":"\\n","color":"reset"}]',
+'[{"text":"沙漠地区 Northern Desert","bold":true,"underlined":true},{"text":"\\n","color":"reset"},
+{"text":"巴比伦 Babylon","color":"dark_purple","bold":false,"underlined":false},{"text":"\\n","color":"reset"},
+{"text":"  西码头","color":"light_purple","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p 24532 65 -5840"}},{"text":"  |  ","color":"black","bold":"false","underlined":"false"},
+{"text":"大水晶祭坛","color":"light_purple","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p 27663 117 -5463"}},{"text":"\\n","color":"reset"},
+{"text":"  集市","color":"light_purple","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p 26558 68 -4697"}},{"text":"  |  ","color":"black","bold":"false","underlined":"false"},
+{"text":"西北港口","color":"light_purple","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p 25257 67 -8516"}},{"text":"\\n","color":"reset"},
+{"text":"空中花园（北）- Paradeisos","color":"dark_green","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p 25925 65 -8197"}},{"text":"\\n","color":"reset"},
+{"text":"特洛伊 - Troy","color":"gold","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p 27131 101 -7568"}},{"text":"\\n","color":"reset"},
+{"text":"莫斯艾斯利 - Mos Eisley","color":"dark_red","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p 26517 67 -3230"}},{"text":"\\n","color":"reset"},
+{"text":"格里芬前哨基地 - Griffin Outpost","color":"dark_blue","bold":false,"underlined":false},{"text":"\\n","color":"reset"},
+{"text":"  机场","color":"blue","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p 22993 67 -2436"}},{"text":"  |  ","color":"black","bold":"false","underlined":"false"},
+{"text":"机动作战中心","color":"blue","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p 21973 77 -2530"}}]'
+],title:"钢石世界新开发区传送书",author:FlazeSky105,display:{Lore:['{"text":"钢石世界传送系统v2.0.5"}']},Tags:["MTP","SUB"]}
+
+
+
+----- Greater Chinese Coprosperity Sphere - ZHG -----
+give @p written_book{pages:[
+'[{"text":"佐山市 City of Sayama","bold":true,"underlined":true},{"text":"\\n","color":"reset"},
+{"text":"  7-Eleven","color":"dark_green","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p 24158 32 15586"}},{"text":"\\n","color":"reset"},
+{"text":"  东城站","color":"gray","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p 25012 31 15646"}},{"text":"\\n","color":"reset"},
+{"text":"  东城大酒店","color":"dark_blue","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p 25569 31 15166"}},{"text":"\\n","color":"reset"},
+{"text":"  霓虹购物中心","color":"light_purple","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p 23230 31 16205"}},{"text":"\\n","color":"reset"},
+{"text":"平安县 County of Ping\'an","bold":true,"underlined":true},{"text":"\\n","color":"reset"},
+{"text":"  西门","color":"dark_red","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p 21074 64 16238"}},{"text":" | ","color":"black","bold":"false","underlined":"false"},
+{"text":"中心","color":"dark_red","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p 21886 64 16238"}},{"text":" | ","color":"reset","bold":"false","underlined":"false"},
+{"text":"东门","color":"dark_red","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p 22672 64 16239"}},{"text":"\\n    ","color":"reset","bold":"false","underlined":"false"},
+{"text":"北门","color":"dark_red","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p 21886 64 15360"}},{"text":" | ","color":"reset","bold":"false","underlined":"false"},
+{"text":"南门","color":"dark_red","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p 21886 64 16875"}},{"text":"\\n","color":"reset"},
+{"text":"樱魂寺 - Sakuratama Temple","color":"dark_purple","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p 28071 56 16116"}},{"text":"\\n","color":"reset"},
+{"text":"漓江 - Li Jiang","color":"green","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p 20398 64 14384"}},
+{"text":"\\n\\n\\n\\n    [返回]","color":"black","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/trigger tpBook set 1"}}]',
+'[{"text":"奉国寺大殿","bold":true,"underlined":true},{"text":"\\n","color":"reset"},
+{"text":"  正门","color":"dark_red","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p 19344 68 14743"}},{"text":" | ","color":"reset","bold":"false","underlined":"false"},
+{"text":"正殿前广场","color":"dark_red","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p 19343 68 14363"}},{"text":"\\n","color":"reset"},
+{"text":"火风殿 Huofeng Temple","bold":true,"underlined":true},{"text":"\\n","color":"reset"},
+{"text":"  风火门","color":"red","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p 21313 82 14472"}},{"text":" | ","color":"black","bold":"false","underlined":"false"},
+{"text":"风云会","color":"dark_purple","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p 21169 90 14148"}},{"text":" | ","color":"reset","bold":"false","underlined":"false"},
+{"text":"坛望塔","color":"dark_green","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p 20917 125 14176"}},{"text":"\\n  ","color":"reset","bold":"false","underlined":"false"},
+{"text":"昭武擂台","color":"gray","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p 21465 87 14213"}},{"text":" | ","color":"black","bold":"false","underlined":"false"},
+{"text":"华南凌船厂","color":"dark_blue","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p 21501 86 14134"}},{"text":"\\n","color":"reset","bold":"false","underlined":"false"},
+{"text":"黄金港 Kugane","bold":true,"underlined":true},{"text":"\\n","color":"reset"},
+{"text":"  闸门","color":"gold","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p 20665 101 13313"}},{"text":" | ","color":"reset","bold":"false","underlined":"false"},
+{"text":"码头","color":"gold","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p 20397 89 13313"}},{"text":"\\n","color":"reset"},
+{"text":"机关镇","color":"dark_gray","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p 19369 76 15915"}},{"text":" | ","color":"reset","bold":"false","underlined":"false"},
+{"text":"煌磐礁","color":"dark_aqua","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p 19422 63 13061"}},{"text":" | ","color":"reset","bold":"false","underlined":"false"},
+{"text":"玄霄阁","color":"aqua","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p 19145 92 12343"}},{"text":"\\n","color":"reset"},
+{"text":"无门岛","color":"green","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p 18880 122 13335"}},{"text":" | ","color":"reset","bold":"false","underlined":"false"},
+{"text":"和风岛","color":"blue","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p 18228 115 13536"}},{"text":" | ","color":"reset","bold":"false","underlined":"false"},
+{"text":"庙会岛","color":"red","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p 17860 64 14140"}},{"text":"\\n","color":"reset"},
+{"text":"莲花阁","color":"light_purple","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p 17008 64 14944"}}]'
+],title:"钢石世界大中华共荣圈传送书",author:FlazeSky105,display:{Lore:['{"text":"钢石世界传送系统v2.0.5"}']},Tags:["ZHG","SUB"]}
