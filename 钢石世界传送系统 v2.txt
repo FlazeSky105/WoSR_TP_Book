@@ -314,7 +314,7 @@ give @p written_book{pages:[
 {"text":" 北滩","color":"red","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p 19056 66 950"}},{"text":"  |  ","color":"black","bold":"false","underlined":"false"},
 {"text":"西滩","color":"gold","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p 17979 66 2113"}},{"text":"\\n","color":"reset"},
 {"text":"钢石海军主泊地 - Main Military Port","color":"dark_blue","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p 10024 68 9186"}},{"text":"\\n","color":"reset"},
-{"text":"\\n\\n    [返回]","color":"black","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/trigger tpBook set 1"}}]',
+{"text":"\\n    [返回]","color":"black","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/trigger tpBook set 1"}}]',
 '[{"text":"玛突波利斯 Mattupolis","bold":true,"underlined":true},{"text":"\\n","color":"reset"},
 {"text":"北郊站 - Hastings Junction Station","color":"gray","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p 27038 69 9590"}},{"text":"\\n","color":"reset"},
 {"text":"机场 - MTP Airport","color":"dark_gray","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p 26965 67 10090"}},{"text":"\\n","color":"reset"},
