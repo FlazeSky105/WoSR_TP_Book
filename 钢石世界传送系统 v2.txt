@@ -23,6 +23,9 @@ v2.0.5 (20240122)
 - 真荔枝kun国成立
 - 添加黑枝岛
 
+v2.0.6 (20240209)
+- 添加千禧年科技都市（原称未来都市）传送点
+
 
 ----- SETUP -----
 /scoreboard objectives add tpBook trigger
@@ -48,7 +51,7 @@ give @p written_book{pages:[
 {"text":"北方地区 Northern Territories","color":"dark_blue","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/trigger tpBook set 8"}},{"text":"\\n","color":"reset"},
 {"text":"新开发区 New Development Region","color":"dark_aqua","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/trigger tpBook set 9"}},{"text":"\\n","color":"reset"},
 {"text":"大中华共荣圈 Greater Chinese Coprosperity Sphere","color":"red","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/trigger tpBook set 10"}}]',
-],title:"钢石世界主传送书",author:FlazeSky105,display:{Lore:['{"text":"钢石世界传送系统v2.0.5"}']},Tags:["MAIN"]}
+],title:"钢石世界主传送书",author:FlazeSky105,display:{Lore:['{"text":"钢石世界传送系统v2.0.6"}']},Tags:["MAIN"]}
 
 
 
@@ -73,7 +76,7 @@ give @p written_book{pages:[
 {"text":"钢石王国社会主义共和联军联合总指挥部及会议山庄 - HQ\\n","color":"dark_red","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p -65 74 4081"}},
 {"text":"明斯克造船厂 - Minsk Shipyard\\n","color":"blue","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p -804 76 5337"}},
 {"text":"迈尔斯王大学 - King Miles University","color":"gold","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p 874 64 3676"}}]'
-],title:"钢石世界钢石区传送书",author:FlazeSky105,display:{Lore:['{"text":"钢石世界传送系统v2.0.5"}']},Tags:["OSR","SUB"]}
+],title:"钢石世界钢石区传送书",author:FlazeSky105,display:{Lore:['{"text":"钢石世界传送系统v2.0.6"}']},Tags:["OSR","SUB"]}
 
 
 
@@ -104,8 +107,12 @@ give @p written_book{pages:[
 {"text":"中心码头 - Center Port","color":"gray","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p 3897 66 7937"}},{"text":"\\n","color":"reset"},
 {"text":"南区中央公园 - South Park","color":"dark_aqua","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p 5028 69 9191"}},{"text":"\\n","color":"reset"},
 {"text":"南区田园 - Southern Countryside","color":"gold","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p 3047 65 9422"}},{"text":"\\n","color":"reset"},
-{"text":"潜艇基地 - Submarine Base","color":"dark_blue","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p 6985 78 8506"}}]'
-],title:"钢石世界格林菲尔德区传送书",author:FlazeSky105,display:{Lore:['{"text":"钢石世界传送系统v2.0.5"}']},Tags:["GRN","SUB"]}
+{"text":"潜艇基地 - Submarine Base","color":"dark_blue","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p 6985 78 8506"}}]',
+'[{"text":"千禧年科技都市 Millenium Tech City","bold":true,"underlined":true},{"text":"\\n","color":"reset"},
+{"text":"枢纽 - Nexus","color":"aqua","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p 747 68 8841"}},{"text":"\\n","color":"reset"},
+{"text":"星海控制中心 - Sea-of-Stars Control Center","color":"dark_aqua","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p -144 72 8393"}},{"text":"\\n","color":"reset"},
+{"text":"宇宙港廊桥 - Space Port Bridge","color":"blue","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p 1141 91 8117"}},{"text":"\\n","color":"reset"}]'
+],title:"钢石世界格林菲尔德区传送书",author:FlazeSky105,display:{Lore:['{"text":"钢石世界传送系统v2.0.6"}']},Tags:["GRN","SUB"]}
 
 
 
@@ -135,7 +142,7 @@ give @p written_book{pages:[
 {"text":"艾希利亚城 - Castle Ethyria","color":"dark_blue","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p -8717 70 1956"}},{"text":"\\n","color":"reset"},
 {"text":"西拉斯克城 - Castle Shirask","color":"blue","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p -7982 88 1236"}},{"text":"\\n","color":"reset"},
 {"text":"天堂陨落之门 - Heavenfall Gate","color":"dark_purple","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p -6838 4 -21"}}]'
-],title:"钢石世界霸王区传送书",author:FlazeSky105,display:{Lore:['{"text":"钢石世界传送系统v2.0.5"}']},Tags:["BWR","SUB"]}
+],title:"钢石世界霸王区传送书",author:FlazeSky105,display:{Lore:['{"text":"钢石世界传送系统v2.0.6"}']},Tags:["BWR","SUB"]}
 
 
 
@@ -184,7 +191,7 @@ give @p written_book{pages:[
 {"text":"  停车场","color":"blue","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p -5156 82 -3919"}},{"text":" | ","color":"reset","bold":"false","underlined":"false"},
 {"text":"酒店","color":"blue","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p -5510 80 -4238"}},{"text":" | ","color":"reset","bold":"false","underlined":"false"},
 {"text":"山顶","color":"blue","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p -5594 134 -3794"}}]'
-],title:"钢石世界潘叔区传送书",author:FlazeSky105,display:{Lore:['{"text":"钢石世界传送系统v2.0.5"}']},Tags:["PAN","SUB"]}
+],title:"钢石世界潘叔区传送书",author:FlazeSky105,display:{Lore:['{"text":"钢石世界传送系统v2.0.6"}']},Tags:["PAN","SUB"]}
 
 
 
@@ -211,7 +218,7 @@ give @p written_book{pages:[
 {"text":"  大俾斯麦广场","color":"red","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p -2029 71 10538"}},{"text":"\\n","color":"reset"},
 {"text":"  时钟塔","color":"red","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p -2357 71 10145"}},{"text":"\\n","color":"reset"},
 {"text":"  总务市政厅","color":"red","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p -1449 71 10475"}},{"text":"\\n","color":"reset"}]'
-],title:"钢石世界银橡树区传送书",author:FlazeSky105,display:{Lore:['{"text":"钢石世界传送系统v2.0.5"}']},Tags:["SVO","SUB"]}
+],title:"钢石世界银橡树区传送书",author:FlazeSky105,display:{Lore:['{"text":"钢石世界传送系统v2.0.6"}']},Tags:["SVO","SUB"]}
 
 
 
@@ -238,7 +245,7 @@ give @p written_book{pages:[
 {"text":"伊森加德遗迹 - Isengard Ruin","color":"dark_red","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p -10773 31 8518"}},{"text":"\\n","color":"reset"},
 {"text":"拉格纳斯坦 - Ragnarstein","color":"green","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p -11719 68 6843"}},{"text":"\\n","color":"reset"},
 {"text":"魔法学院 - Hogwarts","color":"gold","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p -13387 66 7829"}}]'
-],title:"钢石世界天青区传送书",author:FlazeSky105,display:{Lore:['{"text":"钢石世界传送系统v2.0.5"}']},Tags:["AZR","SUB"]}
+],title:"钢石世界天青区传送书",author:FlazeSky105,display:{Lore:['{"text":"钢石世界传送系统v2.0.6"}']},Tags:["AZR","SUB"]}
 
 
 
@@ -289,7 +296,7 @@ give @p written_book{pages:[
 {"text":"斯帕弗朗科尔尚赛道","color":"dark_gray","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p 3268 71 -685"}},{"text":"\\n","color":"reset"},
 {"text":"保罗里卡德赛道","color":"gray","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p 3120 71 65"}},{"text":"\\n","color":"reset"},
 {"text":"迈阿密国际赛车场","color":"light_purple","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p 917 71 -400"}},{"text":"\\n","color":"reset"}]'
-],title:"钢石世界北方地区传送书",author:FlazeSky105,display:{Lore:['{"text":"钢石世界传送系统v2.0.5"}']},Tags:["NPK","SUB"]}
+],title:"钢石世界北方地区传送书",author:FlazeSky105,display:{Lore:['{"text":"钢石世界传送系统v2.0.6"}']},Tags:["NPK","SUB"]}
 
 
 
@@ -336,7 +343,7 @@ give @p written_book{pages:[
 {"text":"格里芬前哨基地 - Griffin Outpost","color":"dark_blue","bold":false,"underlined":false},{"text":"\\n","color":"reset"},
 {"text":"  机场","color":"blue","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p 22993 67 -2436"}},{"text":"  |  ","color":"black","bold":"false","underlined":"false"},
 {"text":"机动作战中心","color":"blue","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p 21973 77 -2530"}}]'
-],title:"钢石世界新开发区传送书",author:FlazeSky105,display:{Lore:['{"text":"钢石世界传送系统v2.0.5"}']},Tags:["MTP","SUB"]}
+],title:"钢石世界新开发区传送书",author:FlazeSky105,display:{Lore:['{"text":"钢石世界传送系统v2.0.6"}']},Tags:["MTP","SUB"]}
 
 
 
@@ -375,4 +382,4 @@ give @p written_book{pages:[
 {"text":"和风岛","color":"blue","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p 18228 115 13536"}},{"text":" | ","color":"reset","bold":"false","underlined":"false"},
 {"text":"庙会岛","color":"red","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p 17860 64 14140"}},{"text":"\\n","color":"reset"},
 {"text":"莲花阁","color":"light_purple","bold":"false","underlined":"false","clickEvent":{"action":"run_command","value":"/tp @p 17008 64 14944"}}]'
-],title:"钢石世界大中华共荣圈传送书",author:FlazeSky105,display:{Lore:['{"text":"钢石世界传送系统v2.0.5"}']},Tags:["ZHG","SUB"]}
+],title:"钢石世界大中华共荣圈传送书",author:FlazeSky105,display:{Lore:['{"text":"钢石世界传送系统v2.0.6"}']},Tags:["ZHG","SUB"]}
