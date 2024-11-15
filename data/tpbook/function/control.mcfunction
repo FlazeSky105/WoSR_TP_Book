@@ -1,7 +1,7 @@
 scoreboard players enable @a tpBook
 
-execute as @a at @s if score @s tpBook matches 1 run clear @p minecraft:written_book{Tags:["SUB"]} 16
-execute as @a at @s if score @s tpBook matches 2.. run clear @p minecraft:written_book{Tags:["MAIN"]} 16
+execute as @a at @s if score @s tpBook matches 1 run clear @p minecraft:written_book[minecraft:custom_data={booktype:1}] 16
+execute as @a at @s if score @s tpBook matches 2.. run clear @p minecraft:written_book[minecraft:custom_data={booktype:0}] 16
 
 execute as @a at @s if score @s tpBook matches 1 run function tpbook:give_main
 execute as @a at @s if score @s tpBook matches 2 run function tpbook:give_osr
